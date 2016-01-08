@@ -4,9 +4,9 @@
   "private": true,
   "main": "app.js",
   "description": "A Node.js bbs using MongoDB",
-  "repository": "https://github.com/cnodejs/nodeclub",
+  "repository": "https://github.com/tianhongbo/nodeclub",
   "engines": {
-    "node": "0.12.x"
+    "node": "5.3.0"
   },
   "dependencies": {
     "async": "1.5.1",
