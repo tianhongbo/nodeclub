@@ -6,41 +6,41 @@
  * Module dependencies.
  */
 
-var config = require('./config');
+var config = require('./config'); // system configuration
 
 if (!config.debug && config.oneapm_key) {
-  require('oneapm');
+  require('oneapm'); //plugin performance monitor
 }
 
 require('colors');
-var path = require('path');
-var Loader = require('loader');
-var LoaderConnect = require('loader-connect')
-var express = require('express');
+var path = require('path'); //file path utilities, core module
+var Loader = require('loader'); // loading static resources (assets done by Jackson Tian:)
+var LoaderConnect = require('loader-connect'); // static assets loader
+var express = require('express'); // web framework
 var session = require('express-session');
-var passport = require('passport');
+var passport = require('passport'); //authentication middleware
 require('./middlewares/mongoose_log'); // 打印 mongodb 查询日志
-require('./models');
+require('./models'); //load subdirectory of 'models'
 var GitHubStrategy = require('passport-github').Strategy;
 var githubStrategyMiddleware = require('./middlewares/github_strategy');
-var webRouter = require('./web_router');
-var apiRouterV1 = require('./api_router_v1');
+var webRouter = require('./web_router'); //web page router
+var apiRouterV1 = require('./api_router_v1'); //api router
 var auth = require('./middlewares/auth');
 var errorPageMiddleware = require('./middlewares/error_page');
 var proxyMiddleware = require('./middlewares/proxy');
 var RedisStore = require('connect-redis')(session);
-var _ = require('lodash');
-var csurf = require('csurf');
-var compress = require('compression');
-var bodyParser = require('body-parser');
-var busboy = require('connect-busboy');
+var _ = require('lodash'); //javascript utilities, can run in nodejs, browser
+var csurf = require('csurf'); //middleware for CSRF protection
+var compress = require('compression'); //middleware compression
+var bodyParser = require('body-parser'); //middleware parsing
+var busboy = require('connect-busboy'); //parser for html form data
 var errorhandler = require('errorhandler');
-var cors = require('cors');
+var cors = require('cors'); //cors
 var requestLog = require('./middlewares/request_log');
 var renderMiddleware = require('./middlewares/render');
 var logger = require('./common/logger');
-var helmet = require('helmet');
-var bytes = require('bytes')
+var helmet = require('helmet'); //tool to set http header
+var bytes = require('bytes'); //tools '1024'<->'1kB'
 
 
 // 静态文件目录
