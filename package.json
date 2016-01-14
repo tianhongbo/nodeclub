@@ -54,9 +54,8 @@
     "utility": "1.6.0",
     "validator": "4.5.0",
     "xmlbuilder": "4.2.0",
-    "xss": "0.2.10"
-  },
-  "devDependencies": {
+    "xss": "0.2.10",
+
     "coveralls": "2.11.6",
     "errorhandler": "1.4.2",
     "istanbul": "0.4.1",
