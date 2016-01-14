@@ -6,7 +6,7 @@
  * Module dependencies.
  */
 
-var config = require('./config'); // system configuration
+var config = require('./config.default'); // system configuration
 
 if (!config.debug && config.oneapm_key) {
   require('oneapm'); //plugin performance monitor
