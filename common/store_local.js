@@ -1,4 +1,4 @@
-var config  = require('../config1');
+var config  = require('../config');
 var utility = require('utility');
 var path    = require('path');
 var fs      = require('fs');

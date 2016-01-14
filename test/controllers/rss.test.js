@@ -10,7 +10,7 @@
 
 var request = require('supertest');
 var app = require('../../app');
-var config = require('../../config1');
+var config = require('../../config');
 
 describe('test/controllers/rss.test.js', function () {
 
@@ -38,7 +38,7 @@ describe('test/controllers/rss.test.js', function () {
       it('should return waring message', function (done) {
         request(app).get('/rss').end(function (err, res) {
           res.status.should.equal(404);
-          res.text.should.equal('Please set `rss` in config1.js');
+          res.text.should.equal('Please set `rss` in config.js');
           done(err);
         });
       });

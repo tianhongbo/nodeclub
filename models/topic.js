@@ -2,7 +2,7 @@ var mongoose  = require('mongoose');
 var BaseModel = require("./base_model");
 var Schema    = mongoose.Schema;
 var ObjectId  = Schema.ObjectId;
-var config    = require('../config1');
+var config    = require('../config');
 var _         = require('lodash');
 
 var TopicSchema = new Schema({

@@ -15,7 +15,7 @@ var TopicCollect = require('../proxy').TopicCollect;
 var EventProxy   = require('eventproxy');
 var tools        = require('../common/tools');
 var store        = require('../common/store');
-var config       = require('../config1');
+var config       = require('../config');
 var _            = require('lodash');
 var cache        = require('../common/cache');
 

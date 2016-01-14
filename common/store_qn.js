@@ -1,5 +1,5 @@
 var qn     = require('qn');
-var config = require('../config1');
+var config = require('../config');
 
 //7牛 client
 var qnClient = null;

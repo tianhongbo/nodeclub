@@ -1,6 +1,6 @@
 var request = require('supertest');
 var app = require('../app');
-var config = require('../config1');
+var config = require('../config');
 
 describe('test/app.test.js', function () {
   it('should / status 200', function (done) {

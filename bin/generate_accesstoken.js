@@ -3,7 +3,7 @@
 
 var uuid = require('node-uuid');
 var mongoose = require('mongoose');
-var config = require('../config1');
+var config = require('../config');
 var async = require('async');
 require('../models/user');
 

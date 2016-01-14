@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var logger   = require('../common/logger');
-var config = require('../config1');
+var config = require('../config');
 
 if (config.debug) {
   var traceMQuery = function (method, info, query) {

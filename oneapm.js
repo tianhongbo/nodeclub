@@ -5,7 +5,7 @@
  * description of configuration variables and their potential values.
  */
 
-var config = require('./config1');
+var config = require('./config');
 
 exports.config = {
   /**

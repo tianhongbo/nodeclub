@@ -12,7 +12,7 @@
 
 var MarkdownIt = require('markdown-it');
 var _          = require('lodash');
-var config     = require('../config1');
+var config     = require('../config');
 var validator  = require('validator');
 var jsxss      = require('xss');
 var multiline = require('multiline')

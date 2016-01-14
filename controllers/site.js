@@ -11,7 +11,7 @@
 
 var User         = require('../proxy').User;
 var Topic        = require('../proxy').Topic;
-var config       = require('../config1');
+var config       = require('../config');
 var eventproxy   = require('eventproxy');
 var cache        = require('../common/cache');
 var xmlbuilder   = require('xmlbuilder');
