@@ -6,7 +6,8 @@
   "description": "A Node.js bbs using MongoDB",
   "repository": "https://github.com/tianhongbo/nodeclub",
   "engines": {
-    "node": "5.3.0"
+    "node": "5.3.0",
+    "npm": "3.5.2"
   },
 
   "dependencies": {

@@ -1,4 +1,4 @@
-var config       = require('../config');
+var config       = require('../config1');
 var convert      = require('data2xml')();
 var Topic        = require('../proxy').Topic;
 var cache        = require('../common/cache');
@@ -8,7 +8,7 @@ var eventproxy   = require('eventproxy');
 exports.index = function (req, res, next) {
   if (!config.rss) {
     res.statusCode = 404;
-    return res.send('Please set `rss` in config.js');
+    return res.send('Please set `rss` in config1.js');
   }
   res.contentType('application/xml');
 

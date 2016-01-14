@@ -9,7 +9,7 @@
  */
 
 var should = require('should');
-var config = require('../../config');
+var config = require('../../config1');
 var app = require('../../app');
 var request = require('supertest')(app);
 

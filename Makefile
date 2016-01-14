@@ -11,8 +11,8 @@ install:
 	@npm install $(NPM_REGISTRY)
 
 pretest:
-	@if ! test -f config.js; then \
-		cp config.default.js config.js; \
+	@if ! test -f config1.js; then \
+		cp config.default.js config1.js; \
 	fi
 	@if ! test -d public/upload; then \
 		mkdir public/upload; \

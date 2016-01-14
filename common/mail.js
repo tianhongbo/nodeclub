@@ -1,6 +1,6 @@
 var mailer        = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
-var config        = require('../config');
+var config        = require('../config1');
 var util          = require('util');
 var logger = require('./logger');
 var transporter     = mailer.createTransport(smtpTransport(config.mail_opts));

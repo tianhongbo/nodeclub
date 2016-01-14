@@ -5,7 +5,7 @@ var User       = require('../../proxy').User;
 var Reply      = require('../../proxy').Reply;
 var at         = require('../../common/at');
 var message    = require('../../common/message');
-var config     = require('../../config');
+var config     = require('../../config1');
 
 var create = function (req, res, next) {
   var topic_id = req.params.topic_id;

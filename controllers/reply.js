@@ -6,7 +6,7 @@ var EventProxy = require('eventproxy');
 var User       = require('../proxy').User;
 var Topic      = require('../proxy').Topic;
 var Reply      = require('../proxy').Reply;
-var config     = require('../config');
+var config     = require('../config1');
 
 /**
  * 添加回复

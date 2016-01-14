@@ -4,7 +4,7 @@ var mm = require('mm');
 var github = require('../../controllers/github');
 var Models = require('../../models');
 var User = Models.User;
-var config = require('../../config');
+var config = require('../../config1');
 var support = require('../support/support');
 
 describe('test/controllers/github.test.js', function () {

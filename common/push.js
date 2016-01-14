@@ -2,7 +2,7 @@ var User       = require('../proxy/user');
 var Message    = require('../proxy/message');
 var JPush      = require("jpush-sdk");
 var eventproxy = require('eventproxy');
-var config     = require('../config');
+var config     = require('../config1');
 var client     = null;
 var logger = require('./logger')
 

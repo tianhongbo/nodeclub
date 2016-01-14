@@ -1,6 +1,6 @@
 var validator      = require('validator');
 var eventproxy     = require('eventproxy');
-var config         = require('../config');
+var config         = require('../config1');
 var User           = require('../proxy').User;
 var mail           = require('../common/mail');
 var tools          = require('../common/tools');

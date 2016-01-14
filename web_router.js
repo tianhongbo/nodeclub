@@ -23,7 +23,7 @@ var github = require('./controllers/github');
 var search = require('./controllers/search');
 var passport = require('passport');
 var configMiddleware = require('./middlewares/conf');
-var config = require('./config');
+var config = require('./config1');
 
 var router = express.Router();
 

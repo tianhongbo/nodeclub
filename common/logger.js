@@ -1,4 +1,4 @@
-var config = require('../config');
+var config = require('../config1');
 
 var env = process.env.NODE_ENV || "development"
 
