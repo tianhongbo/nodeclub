@@ -27,6 +27,14 @@ var config = require('./config');
 
 var router = express.Router();
 
+/*
+ * add for huami
+ *
+ */
+var huami_sign = require('./controllers/huami/huami_sign');
+router.get('/huami-signup', huami_sign.huami_showsignup);  // huami registration
+router.get('/huami-login', huami_sign.huami_showlogin); // huami login
+
 // home page
 router.get('/', site.index);
 // sitemap
