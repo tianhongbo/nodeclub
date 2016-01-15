@@ -2,9 +2,13 @@ var mongoose = require('mongoose');
 var config   = require('../config');
 var logger = require('../common/logger')
 
-mongoose.connect(config.db, {
-  server: {poolSize: 20}
-}, function (err) {
+var options = {
+  server: { poolSize: 20 },
+  user: 'guest',
+  pass: 'guest'
+};
+
+mongoose.connect(config.db, options, function (err) {
   if (err) {
     logger.error('connect to %s error: ', config.db, err.message);
     process.exit(1);

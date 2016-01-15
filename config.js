@@ -47,9 +47,11 @@ var config = {
     //redis_db: 0,
 
     // redis 配置，redislab
+
     redis_host: 'pub-redis-17337.us-east-1-3.1.ec2.garantiadata.com', //guest, guest
     redis_port: 17337,
     redis_db: 0,
+    redis_password: 'guest',
 
 
     session_secret: 'node_club_secret', // 务必修改

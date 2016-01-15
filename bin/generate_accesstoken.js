@@ -7,7 +7,13 @@ var config = require('../config');
 var async = require('async');
 require('../models/user');
 
-mongoose.connect(config.db, function (err) {
+var options = {
+  server: { poolSize: 20 },
+  user: 'guest',
+  pass: 'guest'
+};
+
+mongoose.connect(config.db, options,function (err) {
   if (err) {
     console.error('connect to %s error: ', config.db, err.message);
     process.exit(1);
