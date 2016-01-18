@@ -1,69 +1,76 @@
 /**
  * Created by hongbotian on 1/8/16.
  */
+'use strict';
 
+var SignUpSelector = React.createClass({
+    signUp: function () {
 
-var Signup = React.createClass({
-    render: function() {
+        //TODO for demo
+        var userName=this.userName.value.trim();
+        var email=this.email.value.trim();
+        var password=this.password.value.trim();
+        var confirmedPassword=this.confirmedPassword.value.trim();
+        console.log(userName);
+        console.log(email);
+        console.log(password);
+        console.log(confirmedPassword);
+
+        window.location.href = '/login';
+        return;
+
+        if (!password || !email) {
+            return;
+        }
+        //send to server
+        $.post('/api/signIn', {email: email, password: password}, function (data) {
+            if (data.code === '8000') {
+                window.location.href = '/amdin';
+            }
+        }.bind(this));
+    },
+    render: function () {
         return (
-            <div id='content'>
-                <div class='panel'>
-                    <div class='header'>
-                        <ul class='breadcrumb'>
-                            <li><a href='/'>Home</a><span class='divider'>/</span></li>
-                            <li class='active'>Registration</li>
-                        </ul>
+            <article className="hold-transition login-page loginSelector">
+                <div className="login-box">
+                    <div className="login-logo">
+                        Huami - Forum
                     </div>
-                    <div class='inner'>
-                        <form id='signup_form' class='form-horizontal' action='/signup' method='post'>
-                            <div class='control-group'>
-                                <label class='control-label' for='loginname'>Username</label>
+                    <div className="login-box-body">
+                        <p className="login-box-msg">Sign up to create your account</p>
 
-                                <div class='controls'>
+                        <div className="form-group has-feedback">
+                            <input type="text" className="form-control" placeholder="Name" ref={(ref)=>this.userName=ref} />
+                            <span className="glyphicon glyphicon-user form-control-feedback"></span>
+                        </div>
 
-                                    <input class='input-xlarge' id='loginname' name='loginname' size='30' type='text' value='' />
-                                </div>
+                        <div className="form-group has-feedback">
+                            <input type="email" className="form-control" placeholder="Email" ref={(ref)=>this.email=ref} />
+                            <span className="glyphicon glyphicon-envelope form-control-feedback"></span>
+                        </div>
+
+                        <div className="form-group has-feedback">
+                            <input type="password" className="form-control" placeholder="Password" ref={(ref)=>this.password=ref}/>
+                            <span className="glyphicon glyphicon-lock form-control-feedback"></span>
+                        </div>
+
+                        <div className="form-group has-feedback">
+                            <input type="passwordConfirmed" className="form-control" placeholder="Confirm Password" ref={(ref)=>this.confirmedPassword=ref}/>
+                            <span className="glyphicon glyphicon-lock form-control-feedback"></span>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-xs-12">
+                                <button onClick={this.signUp} type="submit" className=" btn btn-primary btn-block btn-flat">Submit
+                                </button>
                             </div>
-                            <div class='control-group'>
-                                <label class='control-label' for='pass'>Password</label>
-
-                                <div class='controls'>
-                                    <input class='input-xlarge' id='pass' name='pass' size='30' type='password' />
-                                </div>
-                            </div>
-                            <div class='control-group'>
-                                <label class='control-label' for='re_pass'>Confirm Password</label>
-
-                                <div class='controls'>
-                                    <input class='input-xlarge' id='re_pass' name='re_pass' size='30' type='password'/>
-                                </div>
-                            </div>
-                            <div class='control-group'>
-                                <label class='control-label' for='email'>e-mail</label>
-
-                                <div class='controls'>
-
-                                    <input class='input-xlarge' id='email' name='email' size='30' type='text'/>
-                                </div>
-                            </div>
-
-                            <div class='form-actions'>
-                                <input type='submit' class='span-primary' value='Submit'/>
-                                <a href="/auth/github">
-                                    <span class="span-info">
-                                        Login with GitHub account
-                                    </span>
-                                </a>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        )
+            </article>
+        );
     }
 });
 
-ReactDOM.render(
-    <Signup />,
-    document.getElementById('huami_signup')
-);
+ReactDOM.render(<SignUpSelector />, document.getElementById('content'));
+

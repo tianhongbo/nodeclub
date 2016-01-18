@@ -1,0 +1,159 @@
+html, body {
+    height: 100%;
+    margin: auto;
+}
+
+body > div {
+    height: 100%;
+}
+
+body a, span {
+    text-decoration: none !important;
+}
+
+footer {
+    background-color: #222d32;
+    border-top: 3px solid #0177B5;
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    color: #909090;
+}
+
+.profile-info {
+    background-color: #ebeff4;
+    z-index: 9999999;
+}
+
+.profile-info-detail {
+    margin-top: 80px;
+}
+
+.container-info {
+    height: 100%;
+}
+
+.container-info > article {
+    height: 100%;
+}
+
+.content-info {
+    padding: 0 15px 30px 15px;
+    border-radius: 0;
+    overflow: auto;
+}
+
+.img-box {
+    height: 160px;
+    background-color: #7693A0;
+    border-bottom: 2px solid #00bfee;
+    position: relative;
+    color: #FFF;
+    padding: 0 20px;
+}
+
+.img-box > div {
+    background-color: #ebeff4;
+    border: 2px solid #00bfee;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    bottom: -62px;
+    left: 36%;
+    padding: 3px;
+}
+
+/*@media (min-width: 768px) {*/
+/*.img-box > div{*/
+/*left: 36%;*/
+/*}*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*.img-box > div{*/
+/*left: 50%;*/
+/*}*/
+/*}*/
+.img-circle {
+    border-radius: 50%;
+    height: 110px;
+    width: 110px;
+}
+
+.article {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.article-title {
+    border-top: 3px solid #FC9D41;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.article-title-time > i, span {
+    padding: 0 3px;
+}
+
+.article-title > div {
+    float: right;
+    color: #777
+}
+
+.article-content {
+    padding-right: 70px !important;
+}
+
+.article:hover {
+    border: 1px solid #dc4b39;
+    cursor: pointer;
+}
+
+.article > div {
+    padding: 15px;
+}
+
+.article-footer {
+    padding: 5px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.small-box-footer {
+    position: relative;
+    text-align: center;
+    padding: 3px 0;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    z-index: 10;
+    background: #3C8DB7;
+    text-decoration: none;
+}
+
+.fa-icons {
+    font-size: 41px;
+    position: absolute;
+    right: 16px;
+    top: 44%;
+    color: #DBDBDB;
+}
+
+.project-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.project-primary:hover {
+    color: #00beed;
+    background-color: #3072ac;
+    border-color: #245581;
+}

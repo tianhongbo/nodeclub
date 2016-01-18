@@ -32,8 +32,12 @@ var router = express.Router();
  *
  */
 var huami_sign = require('./controllers/huami/huami_sign');
+var huami_forums = require('./controllers/huami/huami_forums');
+var huami_support = require('./controllers/huami/huami_support');
 router.get('/huami-signup', huami_sign.huami_showsignup);  // huami registration
 router.get('/huami-login', huami_sign.huami_showlogin); // huami login
+router.get('/huami-forums', huami_forums.huami_forums); // huami forums
+router.get('/huami-support', huami_support.huami_support); // huami support
 
 // home page
 router.get('/', site.index);
