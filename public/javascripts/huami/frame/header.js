@@ -9,12 +9,14 @@ var HeaderSelector = React.createClass({
         <span className="logo-mini"><b>Huami</b></span>
         <span className="logo-lg"><img src="/public/images/huami-usa.png" className="width:170px"/></span>
       </a>
-
-
       <nav className="navbar navbar-static-top" role="navigation">
 
-        <a href="#" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <a href="/huami-forums" className="sidebar-toggle" data-toggle="offcanvas" role="button">
           <span className="sr-only">Toggle navigation</span>
+        </a>
+
+        <a href="/huami-forums" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span>Go to Forums</span>
         </a>
 
         <div className="navbar-custom-menu">

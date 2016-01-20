@@ -55,7 +55,20 @@ var PostArticleSelector = React.createClass({
   },
   getInitialState: function () {
     return {
-      categoryItems: [],
+      categoryItems: [
+        {
+          "_id" : "1",
+          "name" : "Scale"
+        },
+        {
+          "_id": "2",
+          "name": "Shouhuan"
+        },
+        {
+          "_id" : "3",
+          "name" : "Announcement"
+        }
+      ],
       detail: {}
     };
   },
