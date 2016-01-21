@@ -183,17 +183,17 @@ exports.activeAccount = function (req, res, next) {
     }
     var passhash = user.pass;
     if (!user || utility.md5(user.email + passhash + config.session_secret) !== key) {
-      return res.render('notify/notify', {error: '信息有误，帐号无法被激活。'});
+      return res.render('notify/huami_notify', {category: 'Activating account', message: 'Information is incorrect, so the account can not be activated.'});
     }
     if (user.active) {
-      return res.render('notify/notify', {error: '帐号已经是激活状态。'});
+      return res.render('notify/huami_notify', {category: 'Activating account', message: 'The account has already been activated.'});
     }
     user.active = true;
     user.save(function (err) {
       if (err) {
         return next(err);
       }
-      res.render('notify/notify', {success: '帐号已被激活，请登录'});
+      res.render('notify/huami_notify', {category: 'Activating account', message: 'Configuration! The account is activated, and please login now. '});
     });
   });
 };

@@ -4,8 +4,8 @@ var logger = require('../common/logger')
 
 var options = {
   server: { poolSize: 20 },
-  user: 'guest',
-  pass: 'guest'
+  user: config.db_username,
+  pass: config.db_password
 };
 
 mongoose.connect(config.db, options, function (err) {

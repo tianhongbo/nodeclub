@@ -13,8 +13,8 @@ var config = {
 
     get mini_assets() { return !this.debug; }, // 是否启用静态文件的合并压缩，详见视图中的Loader
 
-    name: 'Nodeclub', // 社区名字
-    description: 'CNode：Node.js专业中文社区', // 社区的描述
+    name: 'Huami', // 社区名字
+    description: 'Huami：The best IoT expert', // 社区的描述
     keywords: 'nodejs, node, express, connect, socket.io',
 
     // 添加到 html head 中的信息
@@ -38,16 +38,22 @@ var config = {
     cnzz_tracker_id: '',
 
     // mongodb 配置
-    //db: 'mongodb://127.0.0.1/node_club_dev',
-    db: 'mongodb://ds056698.mongolab.com:56698/huami-us', //guest, guest
+    // mongodb in localhost
+    db_username: "", //bypass auth
+    db_password: "", //bypass auth
+    db: 'mongodb://127.0.0.1/node_club_dev',
+
+    //mongodb hosted by mongo lab with username:guest, password:guest
+    //db_username: "guest",
+    //db_password: "guest",
+    //db: 'mongodb://ds056698.mongolab.com:56698/huami-us',
 
     // redis 配置，默认是本地
     //redis_host: '127.0.0.1',
     //redis_port: 6379,
     //redis_db: 0,
 
-    // redis 配置，redislab
-
+    // redis for redislab
     redis_host: 'pub-redis-17337.us-east-1-3.1.ec2.garantiadata.com', //guest, guest
     redis_port: 17337,
     redis_db: 0,
@@ -74,12 +80,15 @@ var config = {
     },
 
     // 邮箱配置
+    /**
+     * if using Gmail account, you need goto gmail web site to configure
+     * https://www.google.com/settings/security/lesssecureapps
+     */
     mail_opts: {
-        host: 'smtp.126.com',
-        port: 25,
+        service: 'Gmail',
         auth: {
-            user: 'club@126.com',
-            pass: 'club'
+            user: 'huami.us.test@gmail.com',
+            pass: 'Huami123456'
         }
     },
 
