@@ -19,7 +19,7 @@ var LoginSelector = React.createClass({
         //send to server
         $.post('/api/signIn', {email: email, password: password}, function (data) {
             if (data.code === '8000') {
-                window.location.href = '/amdin';
+                window.location.href = '/signup';
             }
         }.bind(this));
     },
@@ -27,18 +27,18 @@ var LoginSelector = React.createClass({
         return <article className="hold-transition login-page">
             <div className="login-box">
                 <div className="login-logo">
-                    <a href="../../index2.html"><b>Huami Inc.</b></a>
+                    <a href="/"><b>Huami Inc.</b></a>
                 </div>
                 <div className="login-box-body">
                     <p className="login-box-msg">Sign in to start your session</p>
 
-                    <form action="../../index2.html" method="post">
+                    <form action="/signin" method="post">
                         <div className="form-group has-feedback">
-                            <input type="email" className="form-control" placeholder="Email" ref={(ref)=>this.email=ref} />
-                            <span className="glyphicon glyphicon-envelope form-control-feedback"></span>
+                            <input type="text" className="form-control" id='name' name='name' ref={(ref)=>this.userName=ref} placeholder="Full name" />
+                            <span className="glyphicon glyphicon-user form-control-feedback"></span>
                         </div>
                         <div className="form-group has-feedback">
-                            <input type="password" className="form-control" placeholder="Password" ref={(ref)=>this.password=ref} />
+                            <input type="password" className="form-control" id='pass' name='pass' ref={(ref)=>this.password=ref} placeholder="Password" />
                             <span className="glyphicon glyphicon-lock form-control-feedback"></span>
                         </div>
                         <div className="row">

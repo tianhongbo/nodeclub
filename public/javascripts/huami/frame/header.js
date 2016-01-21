@@ -31,12 +31,12 @@ var HeaderSelector = React.createClass({
             </li>
 
             <li>
-              <a href="/huami-login" data-toggle="control-sidebar"><i className="fa fa-sign-in"></i>
+              <a href="/signin" data-toggle="control-sidebar"><i className="fa fa-sign-in"></i>
                 Login</a>
             </li>
 
             <li>
-              <a href="/huami-signup" data-toggle="control-sidebar"><i className="fa fa-user-plus"></i>
+              <a href="/signup" data-toggle="control-sidebar"><i className="fa fa-user-plus"></i>
                 Signup</a>
             </li>
 

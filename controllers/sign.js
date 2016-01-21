@@ -10,7 +10,7 @@ var uuid           = require('node-uuid');
 
 //sign up
 exports.showSignup = function (req, res) {
-  res.render('sign/signup');
+  res.render('sign/huami-signup');
 };
 
 exports.signup = function (req, res, next) {
@@ -85,7 +85,7 @@ exports.signup = function (req, res, next) {
  */
 exports.showLogin = function (req, res) {
   req.session._loginReferer = req.headers.referer;
-  res.render('sign/signin');
+  res.render('sign/huami-signin', {message: 'Sign in to start your session'});
 };
 
 /**
@@ -115,7 +115,7 @@ exports.login = function (req, res, next) {
 
   if (!loginname || !pass) {
     res.status(422);
-    return res.render('sign/signin', { error: '信息不完整。' });
+    return res.render('sign/huami-signin', { message: 'Information is incomplete.' });
   }
 
   var getUser;
@@ -127,7 +127,7 @@ exports.login = function (req, res, next) {
 
   ep.on('login_error', function (login_error) {
     res.status(403);
-    res.render('sign/signin', { error: '用户名或密码错误' });
+    res.render('sign/huami-signin', { message: 'Username or password is incorrect.' });
   });
 
   getUser(loginname, function (err, user) {
@@ -146,7 +146,7 @@ exports.login = function (req, res, next) {
         // 重新发送激活邮件
         mail.sendActiveMail(user.email, utility.md5(user.email + passhash + config.session_secret), user.loginname);
         res.status(403);
-        return res.render('sign/signin', { error: '此帐号还没有被激活，激活链接已发送到 ' + user.email + ' 邮箱，请查收。' });
+        return res.render('sign/huami-signin', { message: 'This account is not activated yet. Please check ' + user.email + ' to activate.' });
       }
       // store session cookie
       authMiddleWare.gen_session(user, res);

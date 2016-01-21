@@ -3,5 +3,5 @@
  */
 
 exports.huami_forums = function (req, res) {
-    res.render("huami/forums/huami_forums");
+    res.render("huamiforums/huami_forums");
 };

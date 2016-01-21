@@ -30,21 +30,19 @@ var router = express.Router();
 /*
  * add for huami
  */
-var huami_sign = require('./controllers/huami/huami_sign');
-var huami_forums = require('./controllers/huami/huami_forums');
-var huami_support = require('./controllers/huami/huami_support');
-router.get('/huami-signup', huami_sign.huami_showsignup);  // huami registration
-router.get('/huami-login', huami_sign.huami_showlogin); // huami login
-router.get('/huami-forums', huami_forums.huami_forums); // huami forums
-router.get('/huami-support', huami_support.huami_support); // huami support
-router.post('/huami-signup', huami_sign.huami_signup); //sign up
+var huami_forums = require('./controllers/huami_forums');
+var huami_support = require('./controllers/huami_support');
+router.get('/forums', huami_forums.huami_forums); // huami forums
+router.get('/support', huami_support.huami_support); // huami support
 
 /*
  * end ./huami
  */
 
 // home page
-router.get('/', site.index);
+//router.get('/', site.index);
+router.get('/', huami_support.huami_support);
+
 // sitemap
 router.get('/sitemap.xml', site.sitemap);
 // mobile app download

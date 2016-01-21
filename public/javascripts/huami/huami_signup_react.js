@@ -33,12 +33,12 @@ var SignUpSelector = React.createClass({
         return <article className="hold-transition register-page">
             <div className="register-box">
                 <div className="register-logo">
-                    <a href="/huami-forums"><b>Humai Inc.</b></a>
+                    <a href="/"><b>Humai Inc.</b></a>
                 </div>
 
                 <div className="register-box-body">
                     <p className="login-box-msg">Register a new membership</p>
-                    <form action="/huami-signup" method="post">
+                    <form action="/signup" method="post">
                         <div className="form-group has-feedback">
                             <input type="text" className="form-control" id='loginname' name='loginname' ref={(ref)=>this.userName=ref} placeholder="Full name" />
                             <span className="glyphicon glyphicon-user form-control-feedback"></span>
@@ -77,7 +77,7 @@ var SignUpSelector = React.createClass({
                             Google+</a>
                     </div>
 
-                    <a href="login.html" className="text-center">I already have a membership</a>
+                    <a href="/signin" className="text-center">I already have a membership</a>
                 </div>
             </div>
         </article>
