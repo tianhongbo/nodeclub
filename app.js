@@ -100,7 +100,7 @@ app.use(session({
     pass: config.redis_password
   }),
   resave: true,
-  saveUninitialized: true,
+  saveUninitialized: true
 }));
 
 // oauth 中间件

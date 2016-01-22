@@ -49,19 +49,20 @@ var config = {
     //db: 'mongodb://ds056698.mongolab.com:56698/huami-us',
 
     // redis 配置，默认是本地
-    //redis_host: '127.0.0.1',
-    //redis_port: 6379,
-    //redis_db: 0,
-
-    // redis for redislab
-    redis_host: 'pub-redis-17337.us-east-1-3.1.ec2.garantiadata.com', //guest, guest
-    redis_port: 17337,
+    redis_host: '127.0.0.1',
+    redis_port: 6379,
     redis_db: 0,
     redis_password: 'guest',
 
+    // redis for redislab
+    //redis_host: 'pub-redis-17337.us-east-1-3.1.ec2.garantiadata.com', //guest, guest
+    //redis_port: 17337,
+    //redis_db: 0,
+    //redis_password: 'guest',
+
 
     session_secret: 'node_club_secret', // 务必修改
-    auth_cookie_name: 'node_club',
+    auth_cookie_name: 'huami_usa',
 
     // 程序运行的端口
     port: 3000,
@@ -97,6 +98,8 @@ var config = {
     weibo_id: 'your_weibo_id',
 
     // admin 可删除话题，编辑标签。把 user_login_name 换成你的登录名
+    // 所有在这里列出的用户都是admin
+
     admins: { user_login_name: true },
 
     // github 登陆的配置

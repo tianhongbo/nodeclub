@@ -75,6 +75,7 @@ exports.authUser = function (req, res, next) {
     return next();
   }
 
+  //all method is used for composition of multi-events
   ep.all('get_user', function (user) {
     if (!user) {
       return next();
