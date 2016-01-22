@@ -11,12 +11,12 @@ var HeaderSelector = React.createClass({
       </a>
       <nav className="navbar navbar-static-top" role="navigation">
 
-        <a href="/huami-forums" className="sidebar-toggle" data-toggle="offcanvas" role="button">
-          <span className="sr-only">Toggle navigation</span>
+        <a href="/support" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span><b>  Support  </b></span>
         </a>
 
-        <a href="/huami-forums" className="sidebar-toggle" data-toggle="offcanvas" role="button">
-          <span>Go to Forums</span>
+        <a href="/forums" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span><b>   Forums   </b></span>
         </a>
 
         <div className="navbar-custom-menu">
