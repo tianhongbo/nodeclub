@@ -135,7 +135,7 @@ var ForumsScale = React.createClass({
                         {
                             "loginname": "alsotang",
                             "avatar_url": "https://avatars.githubusercontent.com/u/1147375?v=3&s=120"
-                        }
+                        },
                     }*/
                 ]
             }
