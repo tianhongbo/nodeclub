@@ -35,7 +35,7 @@
  }
  });
  */
-var ReactRouter = window.ReactRouter;
+var ReactRouter = window.ReactRouter; //ReactRouter is included in .html
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var RouteHandler = ReactRouter.RouteHandler;
@@ -48,7 +48,7 @@ const sideMenuItems = [
         "name" : "Announcement",
         "icon" : "fa fa-bullhorn",
         "path" : "announcement",
-        "reactComponent" : ProfileSelector,
+        "reactComponent" : ForumsAnnouncement,
         "sort" : 1
     },
 
@@ -58,7 +58,7 @@ const sideMenuItems = [
         "name" : "Shouhuan",
         "icon" : "fa fa-heartbeat",
         "path" : "shouhuan",
-        "reactComponent" : PostArticleSelector,
+        "reactComponent" : ForumsTopicDetail,
         "sort" : 1
     },
 
@@ -68,13 +68,14 @@ const sideMenuItems = [
         "name" : "Scale",
         "icon" : "fa fa-balance-scale",
         "path" : "scale",
-        "reactComponent" : ProfileSelector,
+        "reactComponent" : ForumsScale,
         "sort" : 1
     }
 ];
 
 var ContentSelector = React.createClass({
     render: function () {
+
         return (
             <div className="content-wrapper">
                 <section className="content-header">
@@ -98,7 +99,7 @@ var ContentSelector = React.createClass({
 const routes = {
     path: '/',
     component: ContentSelector,
-    indexRoute: { component: ProfileSelector },
+    indexRoute: { component: sideMenuItems[0].reactComponent },
     childRoutes: [
         //side menu
         { path: sideMenuItems[0].path, component: sideMenuItems[0].reactComponent},

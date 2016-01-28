@@ -51,7 +51,7 @@ var NavigatorSelector = React.createClass({
     ]};
   },
   componentDidMount: function () {
-    this.fetchData();
+    //this.fetchData();
   },
   fetchData: function () {
     $.get('/api/getCategory').then(function (category) {
