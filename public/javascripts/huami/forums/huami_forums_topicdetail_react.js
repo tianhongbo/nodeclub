@@ -63,8 +63,9 @@ var ForumsTopicDetail = React.createClass({
     },
 
     componentDidMount: function() {
-        var tid = "";
-        var uri = "https://cnodejs.org/api/v1/topic/5433d5e4e737cbe96dcef312";
+        var tid = this.props.routeParams.tid;
+        //var uri = "https://cnodejs.org/api/v1/topic/5433d5e4e737cbe96dcef312";
+        var uri = "https://cnodejs.org/api/v1/topic/" + tid;
 
         $.get(uri, function(res) {
             if(this.isMounted()) {
@@ -81,7 +82,7 @@ var ForumsTopicDetail = React.createClass({
         }
 
         var lis = replies.map(function(reply) {
-            return <div className="row">
+            return <div className="row" key={reply.id}>
                 <div className="col-md-12">
                     <div className="box box-primary">
                         <div className="box-header with-border">

@@ -7,13 +7,17 @@ var ForumsTopicsList = React.createClass({
 
     render: function() {
 
+        //var uri = "https://cnodejs.org/api/v1/topic/5433d5e4e737cbe96dcef312";
+        var host = "#/api/v1/topic/";
         var title = this.props.title;
         var topics = this.props.topics.data;
         var lis = topics.map(function (topic){
-            return <tr>
+            var uri = host + topic.id;
+            return <tr key={topic.id}>
                 <td>{topic.author.loginname}</td>
                 <td>{topic.reply_count}/{topic.visit_count}</td>
-                <td>{topic.title}</td>
+
+                <td><a href={uri}>{topic.title}</a></td>
                 <td>{topic.last_reply_at.substring(0,10)}</td>
                 <td>{topic.create_at.substring(0,10)}</td>
             </tr>

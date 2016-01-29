@@ -58,7 +58,7 @@ const sideMenuItems = [
         "name" : "Shouhuan",
         "icon" : "fa fa-heartbeat",
         "path" : "shouhuan",
-        "reactComponent" : ForumsTopicDetail,
+        "reactComponent" : ForumsShouhuan,
         "sort" : 1
     },
 
@@ -109,6 +109,9 @@ const routes = {
         //top nav
         { path: "profile", component: ProfileSelector},
         { path: "postarticle", component: PostArticleSelector},
+
+        //forum detail
+        { path: "api/v1/topic/:tid", component: ForumsTopicDetail},
 
         //error handler
         { path: "*", component: Error500}
