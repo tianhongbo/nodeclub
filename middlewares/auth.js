@@ -51,7 +51,7 @@ function gen_session(user, res) {
     path: '/',
     maxAge: 1000 * 60 * 60 * 24 * 30,
     signed: true,
-    httpOnly: true
+    httpOnly: false //Changed from 'true' to 'false' because javascript running in browser needs to detect the status of user login or not.
   };
   res.cookie(config.auth_cookie_name, auth_token, opts); //cookie 有效期30天
 }
