@@ -1,47 +1,76 @@
-<%- partial('../sign/sidebar') %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Huami | Log in</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-<div id='content'>
-  <div class='panel'>
-    <div class='header'>
-      <ul class='breadcrumb'>
-        <li><a href='/'>主页</a><span class='divider'>/</span></li>
-        <li class='active'>登录</li>
-      </ul>
+    <!--stylesheet-->
+    <link rel="stylesheet" href="/public/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/libs/AdminLTE/dist/css/AdminLTE.css">
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="shortcut icon" href="/public/images/favicon.ico"/>
+
+    <!--jquery-->
+    <script src="/public/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--React Lib-->
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    -->
+    <!--App-->
+    <!--<script type='text/babel' src="/public/javascripts/huami/huami_signin_react.js"></script>-->
+
+</head>
+<body>
+<article class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="/"><b>Huami Inc.</b></a>
+        </div>
+        <div class="login-box-body">
+            <p class="login-box-msg"><%= message %></p>
+
+            <form action="/signin" method="post">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" id='name' name='name'  placeholder="Full name" />
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" id='pass' name='pass' placeholder="Password" />
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" /> Remember Me
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="social-auth-links text-center">
+                <p>- OR -</p>
+                <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+                    Facebook</a>
+                <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
+                    Google+</a>
+            </div>
+
+            <a href="#">I forgot my password</a><br />
+            <a href="/signup" class="text-center">Register a new membership</a>
+
+        </div>
     </div>
-    <div class='inner'>
-      <% if(typeof(error) !== 'undefined' && error){ %>
-      <div class="alert alert-error">
-        <a class="close" data-dismiss="alert" href="#">&times;</a>
-        <strong><%= error %></strong>
-      </div>
-      <% } %>
-      <form id='signin_form' class='form-horizontal' action='/signin' method='post'>
-        <div class='control-group'>
-          <label class='control-label' for='name'>用户名</label>
-
-          <div class='controls'>
-            <input class='input-xlarge' id='name' name='name' size='30' type='text'/>
-          </div>
-        </div>
-        <div class='control-group'>
-          <label class='control-label' for='pass'>密码</label>
-
-          <div class='controls'>
-            <input class='input-xlarge' id='pass' name='pass' size='30' type='password'/>
-          </div>
-        </div>
-        <input type='hidden' name='_csrf' value='<%= csrf %>'/>
-
-        <div class='form-actions'>
-          <input type='submit' class='span-primary' value='登录'/>
-          <a href="/auth/github">
-            <span class="span-info">
-              通过 GitHub 登录
-            </span>
-          </a>
-          <a id="forgot_password" href='/search_pass'>忘记密码了?</a>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+</article>
+</body>
+</html>

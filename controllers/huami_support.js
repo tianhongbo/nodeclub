@@ -3,5 +3,5 @@
  */
 
 exports.huami_support = function (req, res) {
-    res.render("huamisupport/huami_support");
+    res.render("huamisupport/support");
 };

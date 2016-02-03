@@ -1,27 +1,59 @@
-<%- partial('../sidebar') %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Huami | Notification</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="/public/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/libs/AdminLTE/dist/css/AdminLTE.css">
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="shortcut icon" href="/public/images/favicon.ico"/>
 
-<div id='content'>
-  <div class='panel'>
-    <div class='header'>
-      <ul class='breadcrumb'>
-        <li><a href='/'>主页</a><span class='divider'>/</span></li>
-        <li class='active'>通知</li>
-      </ul>
-    </div>
-    <div class='inner'>
-      <% if(typeof(error) !== 'undefined' && error){ %>
-      <div class="alert alert-error">
-        <strong><%= error %></strong>
-      </div>
-      <% } %>
-      <% if(typeof(success) !== 'undefined' && success){ %>
-      <div class="alert alert-success">
-        <strong><%= success %></strong>
-      </div>
-      <% } %>
+</head>
+<body>
+<!-- Content Wrapper. Contains page content -->
+<div>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Huami Inc.
+            <small><%= category %></small>
+        </h1>
+    </section>
 
-        <a href="<%- typeof(referer) !== 'undefined' ? referer : '/' %>"><span class="span-common">返回</span></a>
+    <!-- Main content -->
+    <section class="content">
 
-    </div>
-  </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Block buttons -->
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Message: <%= message %></h3>
+                    </div>
+                    <div class="box-body">
+                        <a href='/signin'><button type="button" class="btn btn-default btn-block">Log in</button></a>
+                        <br />
+                        <a href='/signup'><button type="button" class="btn btn-default btn-block btn-flat">Sign up</button></a>
+                        <br />
+                        <a href='/huami-forums'><button type="button" class="btn btn-default btn-block btn-sm">Home</button></a>
+                        <br />
+                    </div>
+                </div>
+                <!-- /.box -->
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /. row -->
+    </section>
+    <!-- /.content -->
 </div>
+<!-- /.content-wrapper -->
+
+
+</body>
+</html>

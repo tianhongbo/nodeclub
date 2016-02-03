@@ -10,7 +10,7 @@ var uuid           = require('node-uuid');
 
 //sign up
 exports.showSignup = function (req, res) {
-  res.render('sign/huami-signup');
+  res.render('sign/signup');
 };
 
 exports.signup = function (req, res, next) {
@@ -85,7 +85,7 @@ exports.signup = function (req, res, next) {
  */
 exports.showLogin = function (req, res) {
   req.session._loginReferer = req.headers.referer;
-  res.render('sign/huami-signin', {message: 'Sign in to start your session'});
+  res.render('sign/signin', {message: 'Sign in to start your session'});
 };
 
 /**
@@ -115,7 +115,7 @@ exports.login = function (req, res, next) {
 
   if (!loginname || !pass) {
     res.status(422);
-    return res.render('sign/huami-signin', { message: 'Information is incomplete.' });
+    return res.render('sign/signin', { message: 'Information is incomplete.' });
   }
 
   var getUser;
@@ -127,7 +127,7 @@ exports.login = function (req, res, next) {
 
   ep.on('login_error', function (login_error) {
     res.status(403);
-    res.render('sign/huami-signin', { message: 'Username or password is incorrect.' });
+    res.render('sign/signin', { message: 'Username or password is incorrect.' });
   });
 
   getUser(loginname, function (err, user) {
@@ -146,7 +146,7 @@ exports.login = function (req, res, next) {
         // 重新发送激活邮件
         mail.sendActiveMail(user.email, utility.md5(user.email + passhash + config.session_secret), user.loginname);
         res.status(403);
-        return res.render('sign/huami-signin', { message: 'This account is not activated yet. Please check ' + user.email + ' to activate.' });
+        return res.render('sign/signin', { message: 'This account is not activated yet. Please check ' + user.email + ' to activate.' });
       }
       // store session cookie
       authMiddleWare.gen_session(user, res);
@@ -183,17 +183,17 @@ exports.activeAccount = function (req, res, next) {
     }
     var passhash = user.pass;
     if (!user || utility.md5(user.email + passhash + config.session_secret) !== key) {
-      return res.render('notify/huami_notify', {category: 'Activating account', message: 'Information is incorrect, so the account can not be activated.'});
+      return res.render('notify/notify', {category: 'Activating account', message: 'Information is incorrect, so the account can not be activated.'});
     }
     if (user.active) {
-      return res.render('notify/huami_notify', {category: 'Activating account', message: 'The account has already been activated.'});
+      return res.render('notify/notify', {category: 'Activating account', message: 'The account has already been activated.'});
     }
     user.active = true;
     user.save(function (err) {
       if (err) {
         return next(err);
       }
-      res.render('notify/huami_notify', {category: 'Activating account', message: 'Configuration! The account is activated, and please login now. '});
+      res.render('notify/notify', {category: 'Activating account', message: 'Configuration! The account is activated, and please login now. '});
     });
   });
 };
