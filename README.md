@@ -22,9 +22,9 @@ Huami forums is based on open source forums software **Nodeclub**, which adopts 
 
 ## Deployment
 
-*不保证 Windows 系统的兼容性*
+* Windows is NOT guaranteed *
 
-线上跑的是 [io.js](https://iojs.org) v2.3.3，[MongoDB](https://www.mongodb.org) 是 v2.6，[Redis](http://redis.io) 是 v2.8.9。
+http://cnodejs.org is deployed with [io.js](https://iojs.org) v2.3.3，[MongoDB](https://www.mongodb.org) v2.6，[Redis](http://redis.io) v2.8.9。
 
 ```
 1. install `Node.js/io.js[required]` `MongoDB[required]` `Redis[required]`
