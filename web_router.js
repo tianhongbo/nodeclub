@@ -41,7 +41,8 @@ router.get('/support', huami_support.huami_support); // huami support
 
 // home page
 //router.get('/', site.index);
-router.get('/', huami_support.huami_support);
+//router.get('/', huami_support.huami_support);
+router.get('/', huami_support.huami_index);
 
 // sitemap
 router.get('/sitemap.xml', site.sitemap);

@@ -33,7 +33,7 @@ var HeaderLoginMenu = React.createClass({
                         <img src="/public/images/i64X64.ico" className="user-image" alt="User Image"/>
                         <span className="hidden-xs">Mike Lee</span>
                     </a>
-                    <ul className="dropdown-menu">
+                    <ul className="dropdown-menu nav nav-stacked">
                         <li className="user-header">
                             <img src="/public/images/i64X64.ico" className="img-circle" alt="User Image"/>
                             <p>
@@ -41,15 +41,16 @@ var HeaderLoginMenu = React.createClass({
                                 <small>I love Huami</small>
                             </p>
                         </li>
-                        <li className="user-body">
+                        <li className="user-body no-padding">
                             <div className="col-xs-12 text-center"></div>
+                            <a href="#/profile" className="btn btn-default btn-flat">Profile</a>
+                            <a href="#/message" className="btn btn-default btn-flat">Message Center</a>
                         </li>
-                        <li className="user-footer">
+                        <li className="user-footer no-padding">
                             <div>
-                                <a href="#/profile" className="btn btn-default btn-flat">Profile</a>
-                                <a href="https://github.com/tianhongbo" className="btn btn-default btn-flat"
-                                   target="_blank">Followers</a>
-                                <a href="/signout" className="btn btn-default btn-flat" data-method="post">Sign out</a>
+                                <form action="/signout" method="post">
+                                    <input type="submit" className="btn btn-default btn-flat" value="Log out"/>
+                                </form>
                             </div>
                         </li>
                     </ul>
@@ -123,11 +124,15 @@ var HeaderSelector = React.createClass({
             </a>
             <nav className="navbar navbar-static-top" role="navigation">
 
-                <a href="/support" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <a href="#/" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span><b>  Home  </b></span>
+                </a>
+
+                <a href="#/support" className="sidebar-toggle" data-toggle="offcanvas" role="button">
                     <span><b>  Support  </b></span>
                 </a>
 
-                <a href="/forums" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <a href="#/forums" className="sidebar-toggle" data-toggle="offcanvas" role="button">
                     <span><b>   Forums   </b></span>
                 </a>
 

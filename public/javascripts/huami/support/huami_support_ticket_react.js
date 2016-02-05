@@ -5,11 +5,11 @@
 var SupportTicketCategorySelector = React.createClass({
     render: function() {
         var lis = this.props.items.map(function(item) {
-            return <option value={item._id}>{item.name}</option>;
+            return <option key={item._id} value={item._id}>{item.name}</option>;
         });
 
         //add new item at beginning of array of 'lis'
-        lis.unshift(<option value="0">Please select a category </option>);
+        lis.unshift(<option key = {"0"} value="0">Please select a category </option>);
         return <select className="form-control">
             {lis}
         </select>
