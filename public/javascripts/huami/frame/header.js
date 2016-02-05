@@ -7,11 +7,11 @@ var HeaderLogoutMenu = React.createClass({
         return <div className="navbar-custom-menu">
             <ul className="nav navbar-nav">
                 <li>
-                    <a href="/signin" data-toggle="control-sidebar"><i className="fa fa-sign-in"></i>
+                    <a href="#/signin" data-toggle="control-sidebar"><i className="fa fa-sign-in"></i>
                         Login</a>
                 </li>
                 <li>
-                    <a href="/signup" data-toggle="control-sidebar"><i className="fa fa-user-plus"></i>
+                    <a href="#/signup" data-toggle="control-sidebar"><i className="fa fa-user-plus"></i>
                         Signup</a>
                 </li>
             </ul>
@@ -24,7 +24,7 @@ var HeaderLoginMenu = React.createClass({
         return <div className="navbar-custom-menu">
             <ul className="nav navbar-nav">
                 <li>
-                    <a href="#/postarticle" data-toggle="control-sidebar"><i className="fa fa-edit"></i>
+                    <a href="#/forums" data-toggle="control-sidebar"><i className="fa fa-edit"></i>
                         Post-Article</a>
                 </li>
 
@@ -43,8 +43,8 @@ var HeaderLoginMenu = React.createClass({
                         </li>
                         <li className="user-body no-padding">
                             <div className="col-xs-12 text-center"></div>
-                            <a href="#/profile" className="btn btn-default btn-flat">Profile</a>
-                            <a href="#/message" className="btn btn-default btn-flat">Message Center</a>
+                            <a href="#/forums" className="btn btn-default btn-flat">Profile</a>
+                            <a href="#/forums" className="btn btn-default btn-flat">Message Center</a>
                         </li>
                         <li className="user-footer no-padding">
                             <div>
