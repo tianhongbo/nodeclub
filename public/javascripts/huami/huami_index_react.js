@@ -32,9 +32,9 @@ const sideMenuItems = [
     /* 3 */
     {
         "_id" : "66177c606a58b7cb3826e1a6",
-        "name" : "Log in",
+        "name" : "Sign In",
         "icon" : "fa fa-sign-in",
-        "path" : "login",
+        "path" : "signin",
         "parent": null,
         "reactComponent" : null,
         "sort" : 1
@@ -335,7 +335,7 @@ const indexRoutes = {
         },
 
         // "/support"
-        { path: 'login',
+        { path: 'signin',
             components: { sideMenu: AppSideMenu , content: LoginContentWrapper }
         },
 
