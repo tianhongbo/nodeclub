@@ -15,7 +15,7 @@ var SupportDownloadSelector = React.createClass({
                         </div>
                         <div className="box-body">
                             <p>Manual for scale. <b>This is the new version.</b></p>
-                            <a href="/public/download/scale.pdf" className="btn btn-primary"><i className="fa fa-download"></i> Download</a>
+                            <a href="download/scale.pdf" className="btn btn-primary"><i className="fa fa-download"></i> Download</a>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ var SupportDownloadSelector = React.createClass({
                         </div>
                         <div className="box-body">
                             <p>Manual for scale. </p>
-                            <a href="/public/download/shouhuan.pdf" className="btn btn-primary"><i className="fa fa-download"></i> Download</a>
+                            <a href="download/shouhuan.pdf" className="btn btn-primary"><i className="fa fa-download"></i> Download</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ var SupportDownloadSelector = React.createClass({
                         </div>
                         <div className="box-body">
                             <p>Manual for Shouhuan. <b>This is the new version.</b></p>
-                            <a href="/public/download/scale.pdf" className="btn btn-danger"><i className="fa fa-download"></i> Download</a>
+                            <a href="download/scale.pdf" className="btn btn-danger"><i className="fa fa-download"></i> Download</a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ var SupportDownloadSelector = React.createClass({
                         </div>
                         <div className="box-body">
                             <p>Manual for Shouhuan. </p>
-                            <a href="/public/download/shouhuan.pdf" className="btn btn-danger"><i className="fa fa-download"></i> Download</a>
+                            <a href="download/shouhuan.pdf" className="btn btn-danger"><i className="fa fa-download"></i> Download</a>
                         </div>
                     </div>
                 </div>

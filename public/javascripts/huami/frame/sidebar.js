@@ -81,7 +81,7 @@ var SideBarUser = React.createClass({
     render: function() {
         return <div className="user-panel">
             <div className="pull-left image">
-                <img src="/public/images/i64X64.ico" className="img-circle" alt="User Image"/>
+                <img src="images/i64X64.ico" className="img-circle" alt="User Image"/>
             </div>
             <div className="pull-left info">
                 <p>Mike Lee</p>

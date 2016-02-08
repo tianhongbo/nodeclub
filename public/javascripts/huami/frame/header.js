@@ -30,12 +30,12 @@ var HeaderLoginMenu = React.createClass({
 
                 <li className="dropdown user user-menu">
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                        <img src="/public/images/i64X64.ico" className="user-image" alt="User Image"/>
+                        <img src="images/i64X64.ico" className="user-image" alt="User Image"/>
                         <span className="hidden-xs">Mike Lee</span>
                     </a>
                     <ul className="dropdown-menu nav nav-stacked">
                         <li className="user-header">
-                            <img src="/public/images/i64X64.ico" className="img-circle" alt="User Image"/>
+                            <img src="images/i64X64.ico" className="img-circle" alt="User Image"/>
                             <p>
                                 Software Engineer
                                 <small>I love Huami</small>
@@ -120,7 +120,7 @@ var HeaderSelector = React.createClass({
         return <header className="main-header">
             <a href="#" className="logo">
                 <span className="logo-mini"><b>Huami</b></span>
-                <span className="logo-lg"><img src="/public/images/huami-usa.png" className="width:170px"/></span>
+                <span className="logo-lg"><img src="images/huami-usa.png" className="width:170px"/></span>
             </a>
             <nav className="navbar navbar-static-top" role="navigation">
 

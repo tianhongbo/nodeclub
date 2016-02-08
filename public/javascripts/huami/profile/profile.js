@@ -8,7 +8,7 @@ var ProfileSelector = React.createClass({
             <div className="col-md-3">
                 <div className="box box-primary">
                     <div className="box-body box-profile">
-                        <img className="profile-user-img img-responsive img-circle" src="/public/images/i64x64.ico"
+                        <img className="profile-user-img img-responsive img-circle" src="images/i64x64.ico"
                              alt="User profile picture"/>
 
                         <h3 className="profile-username text-center">Mike Lee</h3>
