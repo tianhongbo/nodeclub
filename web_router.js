@@ -32,6 +32,7 @@ var router = express.Router();
  */
 var huami_forums = require('./controllers/huami_forums');
 var huami_support = require('./controllers/huami_support');
+var huami_index = require('./controllers/huami_index');
 router.get('/forums', huami_forums.huami_forums); // huami forums
 router.get('/support', huami_support.huami_support); // huami support
 
@@ -42,7 +43,7 @@ router.get('/support', huami_support.huami_support); // huami support
 // home page
 //router.get('/', site.index);
 //router.get('/', huami_support.huami_support);
-router.get('/', huami_support.huami_index);
+router.get('/', huami_index.huami_index);
 
 // sitemap
 router.get('/sitemap.xml', site.sitemap);
