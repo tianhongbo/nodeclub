@@ -66,6 +66,7 @@ var ForumsTopicDetail = React.createClass({
         var tid = this.props.routeParams.tid;
         //var uri = "https://cnodejs.org/api/v1/topic/5433d5e4e737cbe96dcef312";
         var uri = "https://cnodejs.org/api/v1/topic/" + tid;
+        console.log(uri);
 
         $.get(uri, function(res) {
             if(this.isMounted()) {

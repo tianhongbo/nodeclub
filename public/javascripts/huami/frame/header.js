@@ -8,7 +8,7 @@ var HeaderLogoutMenu = React.createClass({
             <ul className="nav navbar-nav">
                 <li>
                     <a href="#/signin" data-toggle="control-sidebar"><i className="fa fa-sign-in"></i>
-                        Login</a>
+                        Signin</a>
                 </li>
                 <li>
                     <a href="#/signup" data-toggle="control-sidebar"><i className="fa fa-user-plus"></i>

@@ -317,7 +317,9 @@ const indexRoutes = {
             childRoutes: [
                 { path: forumsSideMenuItems[0].path, component: forumsSideMenuItems[0].reactComponent },
                 { path: forumsSideMenuItems[1].path, component: forumsSideMenuItems[1].reactComponent },
-                { path: forumsSideMenuItems[2].path, component: forumsSideMenuItems[2].reactComponent }
+                { path: forumsSideMenuItems[2].path, component: forumsSideMenuItems[2].reactComponent },
+                //forum detail
+                { path: "api/v1/topic/:tid", component: ForumsTopicDetail}
             ]},
 
         // "/support"

@@ -8,7 +8,7 @@ var ForumsTopicsList = React.createClass({
     render: function() {
 
         //var uri = "https://cnodejs.org/api/v1/topic/5433d5e4e737cbe96dcef312";
-        var host = "#/api/v1/topic/";
+        var host = "#/forums/api/v1/topic/";
         var title = this.props.title;
         var topics = this.props.topics.data;
         var lis = topics.map(function (topic){
